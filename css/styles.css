@@ -51,7 +51,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 2.5rem;
   justify-content: center;
   text-transform: uppercase;
-  flex-flow: column wrap;
   align-items: center;
 }
 
@@ -64,7 +63,6 @@ nav {
   width: 100%;
   background-color: #252831;
   text-align: center;
-  align-items: center;
   justify-content: center;
 }
 
@@ -73,12 +71,13 @@ nav h1, #breadcrumb {
 }
 
 nav h1 a {
+  margin: 0;
+  margin-right: -0.4rem; /* to compensate for the letter spacing at the end*/
   width: 100%;
   color: #fff;
   font-size: 1.9rem;
   font-weight: 200;
   letter-spacing: 0.4rem;
-  margin-right: -0.4rem; /* to compensate for the letter spacing at the end*/
   text-transform: uppercase;
   flex-basis: 50%;  
 }
@@ -180,8 +179,6 @@ nav h1 a {
   max-width: 27rem;
 }
 #restaurants-list .restaurant-img {
-  background-color: #ccc;
-  display: block;
   margin: 0;
   width: 100%;
 }
@@ -227,9 +224,7 @@ nav h1 a {
   width: 100%;
 }
 .inside #footer {
-  bottom: 0;
-  position: fixed;
-  width: 50%;
+  width: 60%;
 }
 #restaurant-name {
   color: #f18200;
@@ -239,55 +234,58 @@ nav h1 a {
   margin: 1.5rem 0 3rem;
   text-transform: uppercase;
   line-height: 1.1;
+  padding: 0 0 0.1rem 4rem;
+  align-self: flex-start;
 }
-#restaurant-img {
-  max-width: 100%;
+#restaurant-img, #restaurant-cuisine {
+  width: 100%;
+  max-width: 60rem;
+  margin: auto;
 }
 #restaurant-address {
-  font-size: 1.2rem;
+  font-size: 1.2rem; 
   margin: 1rem 0;
 }
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 300;
   letter-spacing: 1rem;
-  margin: 0 0 2rem;
-  padding: 0.2rem 0;
+  padding: 0.3rem 0;
   text-align: center;
   text-transform: uppercase;
-	width: 100%;
 }
 #restaurant-container, #reviews-container {
   border-bottom: 0.1rem solid #d9d9d9;
   border-top: 0.1rem solid #fff;
-  padding: 7rem 2rem 3rem;
-  width: calc(60% - 4rem);
+  padding: 7rem 0rem 3rem;
+  width: 60%;
+  align-items: center; 
+  flex-direction: column;
 }
-#reviews-container {
-  padding: 3rem 2rem 8rem;
-}
+
 #reviews-container h2 {
   color: #f58500;
   font-size: 2.4rem;
   font-weight: 300;
   letter-spacing: -0.1rem;
-  padding-bottom: 0.1rem;
+  padding: 0 0 0.1rem 4rem;
+  align-self: flex-start;
 }
 #reviews-list {
-  margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #reviews-list li {
   background-color: #fff;
-    border: 0.2rem solid #f3f3f3;
-  display: block;
+  border: 0.2rem solid #f3f3f3;
   list-style-type: none;
   margin: 0 0 3rem;
   overflow: hidden;
   padding: 0 2rem 2rem;
-  position: relative;
   width: 85%;
 }
 #reviews-list li p {
